@@ -1,0 +1,239 @@
+<div class="loader-overlay" *ngIf="!loading">
+    <div class="loadingspinner"></div>
+</div>
+<div class="two-column-layout" >
+    <div class="container-fluid">
+        <div class="back-btn">
+            <a mat-stroked-button (click)="previousPage()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="20"
+                    viewBox="0 0 24 20" fill="none">
+                    <path
+                        d="M6 10L5.35982 10.7682L4.43795 10L5.35982 9.23178L6 10ZM11.3598 15.7682L5.35982 10.7682L6.64018 9.23178L12.6402 14.2318L11.3598 15.7682ZM5.35982 9.23178L11.3598 4.23178L12.6402 5.76822L6.64018 10.7682L5.35982 9.23178Z"
+                        fill="#C4C4C4" />
+                    <path
+                        d="M12 10L11.3598 10.7682L10.438 10L11.3598 9.23178L12 10ZM17.3598 15.7682L11.3598 10.7682L12.6402 9.23178L18.6402 14.2318L17.3598 15.7682ZM11.3598 9.23178L17.3598 4.23178L18.6402 5.76822L12.6402 10.7682L11.3598 9.23178Z"
+                        fill="#C4C4C4" />
+                </svg>&nbsp;&nbsp;&nbsp;Go Back</a>
+        </div>
+        <div class="row">
+            <!-- <div class="col-md-7 col-sm-12 col-xs-12"> -->
+                <!-- panel one start -->
+                <!-- <div class="panel country-selector">
+                    <div class="panel-content">
+                        <div #main style="width: 100%;height: 80vh;"></div>
+                    </div> -->
+                    <!-- panel one End -->
+                <!-- </div>
+            </div> -->
+
+            <div class="col-md-7 col-sm-12 col-xs-12">
+                <!-- panel one start -->
+                <div class="panel country-selector">
+                    <div class="panel-content">
+                        <div style="display: flex; margin-bottom: -10%;">
+                            <div id="Treechart0" style="width: 100%;height: 70vh"></div>
+                            <!-- <div id="Treechart1" style="width: 100%;height: 70vh"></div> -->
+                        </div>
+                    </div>
+                    <!-- panel one End -->
+                </div>
+            </div>
+
+            <div class="col-md-5 col-sm-12 col-xs-12">
+                <!-- panel one start -->
+                <div class="panel comparative-details">
+                    <div class="panel-content">
+                        <div class="compartive-table-details">
+                            <div class="table-details-heading">
+                                <h5 *ngIf="governance_name">{{governance_name}}</h5>
+                                <!-- <button >Bar Chart</button> -->
+                                <div class="detail-btn">
+                                    <a mat-stroked-button (click)="ToggleChart()">{{chartTitle}}</a>
+                                </div>
+                                <!-- <button mat-raised-button (click)="ToggleChart()">{{chartTitle}}</button> -->
+                            </div>
+                            <div class="bar-chart-taxonomy" *ngIf="showBarChart">
+                                <label>{{bar_chart ? bar_chart[0].taxonomy_name : ''}}</label>
+                            </div>
+                            <div class="table-com">
+                                <div [class]="showBarChart ? 'showChart' : 'hideChart'">
+                                    <!-- <div id="chartdiv2" style="width: 100%; height: 250px;margin: 0 auto; margin-top: 15px;"></div> -->
+                                    <div id="mainchart56" style="width: 100%; height: 300px;margin: 0 auto;"></div>
+                                </div>
+                                <div [class]="showBarChart ? 'hideChart' : 'showChart'">
+                                    <div id="chartdiv1" style="width: 100%; height: 250px;margin: 0 auto;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- panel one End -->
+                <!-- panel one start -->
+                <div class="panel comparative-details" *ngIf="taxonomy_overviews && taxonomy_overviews[0]">
+                    <div class="panel-content">
+                        <div class="table-details-heading">
+                            <div class="status-table">
+                                <h5 *ngIf="taxonomy_overviews && taxonomy_overviews[0] && taxonomy_overviews[0].governance_name">{{taxonomy_overviews[0].governance_name}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-content">
+                        <div class="detail-btn">
+                            <a mat-stroked-button [routerLink]="['../comparative-result-detail']">More details</a>
+                        </div>
+                        <div class="select-country-area">
+                            <div class="country-label table-details-heading">
+                                <h5>{{this.bar_chart ? this.bar_chart[0].development_type : ''}}</h5>
+                                <h6>{{this.bar_chart ? this.bar_chart[0].ultimate_field : ''}}</h6>
+                            </div>
+
+                            <!-- country dropdown start -->
+                            <div class="status-badge">
+                                <ul>
+                                    <li><span class="circle_badge success"></span>{{ country1?.country }}</li>
+                                    <li><span class="circle_badge danger"></span>{{ country2?.country }}</li>
+                                </ul>
+                            </div>
+
+                            <!-- country dropdown End -->
+                        </div>
+                        <div class="compartive-table-details">
+                            <div class="table-com">
+                                <div class="vertical-tab-content">
+                                    <div id="container">
+                                        <div class="list overview-content" id="one">
+                                            <div class="data-vertical-label">
+                                                <h3>Indicators</h3>
+                                                <h3>Comparison</h3>
+                                            </div>
+                                            <mat-accordion>
+                                                <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)"
+                                                    hideToggle>
+                                                    <mat-expansion-panel-header>
+                                                        <mat-panel-title *ngIf="taxonomy_overviews && taxonomy_overviews[0].taxonomy_name">
+                                                           {{ taxonomy_overviews[0].taxonomy_name}}
+                                                        </mat-panel-title>
+                                                        <mat-panel-description>
+                                                        </mat-panel-description>
+                                                    </mat-expansion-panel-header>
+                                                    <div class="accordion-content">
+                                                        <div class="content-row title-main">
+                                                            <mat-accordion>
+                                                                <div class="content-inner">
+                                                                    <mat-expansion-panel *ngFor="let indicator of taxonomy_indicators.indicators; let j=index; first as isFirst;" [expanded]="isFirst" (opened)="setStepInner(j)" hideToggle>
+                                                                        <mat-expansion-panel-header>
+                                                                            <div class="main-col row">
+                                                                            <div class="left-content col-md-7">
+                                                                                <mat-panel-title>
+                                                                                    <div><mat-icon>arrow_drop_down</mat-icon></div>
+                                                                                    <div>{{indicator.name}}</div>
+                                                                                </mat-panel-title>
+                                                                            </div>
+                                                                            <div class="right-content col-md-5">
+                                                                                <div class="row">
+                                                                                <div class="country-1 col-md-6">
+                                                                                    <Span>
+                                                                                        <mat-icon *ngIf="indicator.score[0].country_percantag1 > indicator.score[0].country_percantag2 || indicator.score[0].country_percantag1 == indicator.score[0].country_percantag2">arrow_drop_up
+                                                                                        </mat-icon>
+                                                                                        <mat-icon *ngIf="indicator.score[0].country_percantag1 < indicator.score[0].country_percantag2">arrow_drop_down
+                                                                                        </mat-icon>
+                                                                                    </Span>
+                                                                                    <div class="rating">
+                                                                                        <ng-container *ngFor="let dash of dash_array;let i=index">
+                                                                                            <span *ngIf=" dash <= indicator.score[0].country_percantag1" class="green"></span>
+                                                                                            <span *ngIf=" dash > indicator.score[0].country_percantag1" class="gray"></span>
+                                                                                        </ng-container>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="country-2 col-md-6">
+                                                                                    <Span>
+                                                                                        <mat-icon *ngIf="indicator.score[0].country_percantag2 > indicator.score[0].country_percantag1 || indicator.score[0].country_percantag2 == indicator.score[0].country_percantag1">arrow_drop_up
+                                                                                        </mat-icon>
+                                                                                        <mat-icon *ngIf="indicator.score[0].country_percantag2 < indicator.score[0].country_percantag1">arrow_drop_down
+                                                                                        </mat-icon>
+                                                                                    </Span>
+                                                                                    <div class="rating">
+                                                                                        <ng-container *ngFor="let dash of dash_array;">
+                                                                                            <span *ngIf=" dash <= indicator.score[0].country_percantag2" class="blue"></span>
+                                                                                            <span *ngIf=" dash > indicator.score[0].country_percantag2" class="gray"></span>
+                                                                                        </ng-container>
+                                                                                    </div>
+                                                                                </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            </div>
+                                                                        </mat-expansion-panel-header>
+                                                                        <div class="content-row overview-tab"
+                                                                            *ngFor="let question of indicator.questions; let k=index;">
+                                                                            <div class="query-right-content row">
+                                                                                <div class="query-name text-capitalize col-md-7">
+                                                                                    {{question.name}}</div>
+                                                                                    <div class="status-lines col-md-5">
+                                                                                        <div class="row">
+                                                                                <div class="country-1 col-md-6">
+                                                                                    <div class="rating">
+                                                                                        <span
+                                                                                            *ngIf="question.question_status1 == 'Yes'"
+                                                                                            class="green success"></span>
+                                                                                        <span
+                                                                                            *ngIf="question.question_status1 == 'No'"
+                                                                                            class="alert-red danger"></span>
+                                                                                        <span
+                                                                                            *ngIf="question.question_status1 == 'Data not available'"
+                                                                                            class="gray disable-status"></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="country-2 col-md-6">
+                                                                                    <div class="rating">
+                                                                                        <span
+                                                                                            *ngIf="question.question_status2 == 'Yes'"
+                                                                                            class="green success"></span>
+                                                                                        <span
+                                                                                            *ngIf="question.question_status2 == 'No'"
+                                                                                            class="alert-red danger"></span>
+                                                                                        <span
+                                                                                            *ngIf="question.question_status2 == 'Data not available'"
+                                                                                            class="gray disable-status"></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </mat-expansion-panel>
+                                                                </div>
+                                                            </mat-accordion>
+                                                        </div>
+                                                    </div>
+                                                </mat-expansion-panel>
+                                            </mat-accordion>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- panel one End -->
+                <!-- panel one start -->
+                <div class="panel comparative-details">
+                    <div class="panel-content">
+                        <div class="compartive-table-details">
+                            <div class="table-details-heading">
+                                <h5>{{this.bar_chart ? this.bar_chart[0].taxonomy_name : ''}}</h5>
+                                <div class="status-table">
+                                    <!-- <h5>Availability - Readiness</h5> -->
+                                </div>
+                            </div>
+                            <div class="table-com">
+                                <div echarts [options]="chartOptionRadar" class="demo-chart" style="width:100%;height:50vh; margin-top: -40px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- panel one End -->
+            </div>
+        </div>
+    </div>
+</div>

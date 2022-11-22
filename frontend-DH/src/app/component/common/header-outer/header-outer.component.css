@@ -1,0 +1,104 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+::ng-deep .mat-toolbar-single-row {
+    height: 95px;
+}
+
+.header-area button {
+    background: transparent;
+    border: none;
+}
+
+.logo {
+    display: inline-block;
+    margin-right: 20px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.brand-img {
+    display: flex;
+    align-items: center;
+}
+
+.logo-title h1 {
+    font-weight: 500;
+    color: #5380CD;
+}
+
+.logo-title a {
+    font-size: 10px;
+    text-decoration: none;
+    color: #20e7a0;
+    border: 1px solid #20e7a0;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.logo-title a:hover {
+    color: #fff;
+    background-color: #20e7a0;
+}
+.header-area nav.navbar ul li a {
+    font-size: 16px;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+    font-weight: 400;
+}
+@media only screen and (min-width:991px){
+    .header-area nav.navbar ul li.nav-item.active a, .header-area nav.navbar ul li.nav-item a:hover {
+        color: #64D3BB !important;
+        border-top: 2px solid;
+    }
+    li.nav-item.active a, .header-area nav.navbar ul li.nav-item a:hover {
+        padding-top: 6px;
+    }
+    .header-area nav.navbar ul li a {
+        color: #5380CD !important;
+    }
+}
+@media only screen and (max-width:990px) {
+    .header-area div#navbarNav {
+        position: absolute;
+        top: 93px;
+        width: 100%;
+        left: 0;
+        padding: 0 15px;
+        z-index: 555;
+    }
+    ul.navbar-nav {
+        width: 100%;
+        background: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: 1px 3px 5px 1px #e4e4e4;
+        border-radius: 15px;
+    }
+    li.nav-item.active {
+        background: #64d3bb !important;
+    }
+    li.nav-item.active a{
+        color:#fff !important;
+    }
+    button.navbar-toggler:focus {
+        box-shadow: none;
+        outline: none;
+    }
+    .navbar-toggler {
+        padding: 0 !important;
+    }
+    nav.navbar.navbar-expand-lg .container-fluid {
+        padding: 0 !important;
+    }
+    .navbar{
+        position: inherit !important;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .logo-title h1 {
+        display: none;
+    }
+}

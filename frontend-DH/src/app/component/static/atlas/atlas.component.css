@@ -1,0 +1,170 @@
+a {
+    color: #5380c1;
+    text-decoration: none;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+#research-and-findings {
+    background-image: url(/assets/images/image-ajout-GRM-1-.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+
+#national-digital-health-strategy {
+    background-image: url(/assets/images/image-ajout-GRM-2-.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+
+.advance-digital {
+    padding: 0px 0 50px;
+    text-align: left;
+    vertical-align: middle;
+    margin: 100px auto 0;
+}
+
+.advance-digital h5 {
+    color: #6b91c7;
+    font-family: Roboto, sans-serif;
+}
+
+.advance-digital h3 {
+    color: #5380cd;
+    font-family: Roboto, sans-serif;
+}
+
+.advance-digital p {
+    font-family: Roboto, sans-serif;
+    color: #5380cd;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 26px;
+}
+
+.advance-digital hr {
+    color: #64d3bb;
+    border: 1px solid #64d3bb;
+    background-color: #64d3bb;
+    font-size: 100px;
+    height: 2px;
+    display: block;
+    margin-left: 0;
+    margin-right: 85%;
+    margin-top: 0;
+}
+
+.figure-title {
+    color: #037fd1;
+    font-family: Roboto, sans-serif;
+}
+
+.atlas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.digital li a {
+    color: #5380c1;
+    font-family: Roboto, sans-serif;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+
+@media (min-width: 1200px) {
+    #research-and-findings span {
+        font-size: 6rem !important;
+        margin-left: 2rem !important;
+        margin-right: 3rem !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    #research-and-findings h2 {
+        font-size: 2.5rem;
+    }
+}
+
+.research-and-findings h2 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: xx-large;
+    margin: 0 !important;
+    margin-top: 7% !important;
+    font: 500 Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 32px;
+}
+
+@media (min-width: 1200px) {
+    #national-digital-health-strategy h2, .research-and-findings h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px !important;
+        font-weight: 400;
+        margin-top: 12% !important;
+    }
+
+}
+
+.national-digital-health-strategy h2 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-large;
+    margin: 0 !important;
+    font: 500  Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 32px;
+}
+
+.advance-digital hr {
+    color: #64d3bb;
+    border: 1px solid #64d3bb;
+    background-color: #64d3bb;
+    font-size: 100px;
+    height: 3px;
+    display: block;
+    margin-left: 0;
+    margin-right: 79%;
+    margin-top: -10px;
+    opacity: 1;
+}
+
+.images {
+    cursor: pointer;
+}
+.has-border {
+    border: 1px solid #b3bac5;
+    padding: 16px;
+    box-sizing: content-box;
+    border-radius: 4px;
+}
+@media (max-width: 1199px){
+#research-and-findings span, #national-digital-health-strategy span {
+    font-size: 3rem!important;
+    margin-left: 1rem!important;
+    margin-right: 2rem!important;
+    letter-spacing: -0.5rem !important;
+}
+.research-and-findings h2, #national-digital-health-strategy h2 {
+    font-size: 1.65rem !important;
+    font-weight: 400 !important;
+    margin-bottom: 10px !important;
+}
+.national-digital-health-strategy h2 {
+    margin-top: 7% !important;
+}
+}
+@media only screen and (max-width:767px){
+    .container{
+        padding: 0 20px;
+    }
+  }

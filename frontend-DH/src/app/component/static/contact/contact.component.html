@@ -1,0 +1,63 @@
+<div class="w-100">
+    <section class="advance-digital">
+        <div class="container">
+            <h3><strong> CONTACT US</strong></h3>
+            <br />
+            <hr />
+            <br />
+            <div class="row">
+                <div class="col-md-6 mt-5">
+                    <p>
+                        Drop us an E-mail, we would like to get your feedback or
+                        if you :
+                    </p>
+                    <div class="contact mt-3">
+                        <ul>
+                            <li>Have a project that is aligned with our GRM</li>
+                            <li>Want to get involved in our Hubs</li>
+                            <li>
+                                Want to get more information on how you can
+                                support us.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contactform">
+                        <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
+                            <label>Name</label>
+                            <input type="text" formControlName="name" name="from_name" placeholder="Your Name" />
+                            <small *ngIf="formControls['name'].touched && formControls['name'].errors">This field is
+                                required.</small>
+                            <label>Subject</label>
+                            <input formControlName="subject" type="text" name="subject" placeholder="Subject" />
+                            <small *ngIf="formControls['subject'].touched && formControls['subject'].errors">This field
+                                is required.</small>
+                            <label>Email</label>
+                            <input formControlName="email" type="email" name="email" placeholder="Your Email" />
+                            <small
+                                *ngIf=" formControls['email'].touched && formControls['email'].errors && formControls['email'].errors.required">This
+                                field is required.</small>
+                            <small
+                                *ngIf=" formControls['email'].touched && formControls['email'].errors && formControls['email'].errors.email">Email
+                                is invalid.</small>
+                            <label>Message</label>
+                            <textarea formControlName="message" name="message" cols="30" rows="5"
+                                placeholder="Message"></textarea>
+                            <small *ngIf=" formControls['message'].touched && formControls['message'].errors">This field
+                                is required.</small>
+
+                            <button [disabled]="!contactForm.valid" value="Send" class="button button1 b tn mt-3 mb-4">
+                                Send
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div *ngIf="windowScrolled" class="el-backtop" style="right: 40px; bottom: 40px;" (click)="scrollToTop()">
+    <i class="material-icons">arrow_drop_up</i>
+</div>

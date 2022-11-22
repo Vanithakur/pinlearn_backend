@@ -1,0 +1,18 @@
+<div class="w-100">
+    <section class="advance-digital">
+        <div class="container">
+            <h3><strong>GRM Report</strong></h3>
+            <br />
+            <hr />
+            <br />
+            <div class="row">
+                <!-- <mat-spinner class="spinner" *ngIf="!loaded" diameter=40 mode="indeterminate"></mat-spinner> -->
+                <ngx-extended-pdf-viewer [theme]="'dark'" [showBorders]="true"  [mobileFriendlyZoom]="'true'"   [src]="'/assets/pdfs/Rapport-GRM.pdf'" [useBrowserLocale]="true" (progress)="showLoader($event)"></ngx-extended-pdf-viewer>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div *ngIf="windowScrolled" class="el-backtop" style="right: 40px; bottom: 40px;" (click)="scrollToTop()">
+    <i class="material-icons">arrow_drop_up</i>
+</div>

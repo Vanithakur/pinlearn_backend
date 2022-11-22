@@ -1,0 +1,81 @@
+h5 {
+    font-size: 1.25rem;
+}
+
+.advance-digital h3 {
+    color: #5380cd;
+    font-family: Roboto, sans-serif;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+.advance-digital {
+    padding: 0px 0 50px;
+    text-align: left;
+    vertical-align: middle;
+    margin: 100px auto 0;
+}
+
+.advance-digital h3 {
+    color: #5380cd;
+    font-family: Roboto, sans-serif;
+}
+
+.advance-digital h5 {
+    color: #6b91c7;
+    font-family: Roboto, sans-serif;
+}
+
+.methodology li {
+    color: #5380cd;
+    font-weight: 400;
+    font-family: Fivo Sans;
+    text-align: justify;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.advance-digital p {
+    font-family: Roboto, sans-serif;
+    color: #5380cd;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 26px;
+}
+
+.figure-title {
+    color: #037fd1;
+    font-family: Roboto, sans-serif;
+}
+
+.has-border {
+    border: 1px solid #b3bac5;
+    padding: 16px;
+    box-sizing: content-box;
+    border-radius: 4px;
+}
+
+.advance-digital hr {
+    color: #64d3bb;
+    border: 1px solid #64d3bb;
+    background-color: #64d3bb;
+    font-size: 100px;
+    height: 3px;
+    display: block;
+    margin-left: 0;
+    margin-right: 85%;
+    margin-top: -10px;
+    opacity: 1;
+}
+
+.images {
+    cursor: pointer;
+}
+@media (max-width:767px){
+    .container {
+        padding: 0 20px;
+    }
+}
+

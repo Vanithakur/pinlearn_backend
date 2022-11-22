@@ -1,0 +1,149 @@
+h5 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+label {
+    float: left;
+    font-size: 16px;
+}
+
+small {
+    color: rgb(255, 96, 96);
+    font-weight: 500;
+    display: flex;
+    font-size: 12px;
+    margin-top: -10px;
+}
+
+input[type=email], input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.advance-digital {
+    padding: 0px 0 50px;
+    text-align: left;
+    vertical-align: middle;
+    margin: 100px auto 0;
+}
+
+.advance-digital h3 {
+    color: #5380cd;
+    font-family: Roboto, sans-serif;
+}
+
+.advance-digital h5 {
+    color: #6b91c7;
+    font-family: Roboto, sans-serif;
+}
+
+.advance-digital p {
+    font-family: Roboto, sans-serif;
+    color: #5380cd;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.advance-digital hr {
+    color: #64d3bb;
+    border: 1px solid #64d3bb;
+    background-color: #64d3bb;
+    font-size: 100px;
+    height: 3px;
+    display: block;
+    margin-left: 0;
+    margin-right: 87%;
+    margin-top: -10px;
+    opacity: 1;
+}
+
+.figure-title {
+    color: #037fd1;
+    font-family: Roboto, sans-serif;
+}
+
+.contactform {
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.contact li, .contact ul {
+    list-style: inside;
+    color: #5380cd;
+    font-weight: 400;
+    font-family: 'Roboto', 'Material Icons', sans-serif !important;
+    text-align: justify;
+    line-height: 30px;
+    font-size: 16px;
+
+}
+
+
+.button1 {
+    background-color: #64d3bb;
+    color: #fff;
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border: none;
+    border-radius: 2em;
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    transition: all .2s;
+}
+
+.button1:disabled {
+    background-color: #b1dad1;
+}
+
+input.ng-invalid.ng-dirty.ng-touched {
+    border: 1px solid #91ffff;
+}
+textarea:focus , input:focus {
+    outline: none !important;
+    border:1px solid #b1dad1;
+    box-shadow: 0 0 5px #b1dad1;
+  }
+  @media only screen and (max-width:767px){
+    .contact.mt-3 ul {
+        padding: 0;
+    }
+    .container{
+        padding: 0 20px;
+    }
+  }
+  /* Landscape */
+  @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .advance-digital{
+        height: 73vh !important; 
+    }
+}
+  
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 820px) 
+  and (max-device-width: 1180px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .advance-digital{
+        height: 76.5vh !important;
+    }
+}

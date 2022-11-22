@@ -1,0 +1,80 @@
+h5 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+.advance-digital {
+    padding: 0px 0 50px;
+    text-align: left;
+    vertical-align: middle;
+    margin: 100px auto 0;
+}
+
+.advance-digital h3 {
+    color: #5380cd;
+    font-family: 'Roboto', sans-serif;
+}
+
+.advance-digital h5 {
+    color: #6b91c7;
+    font-family: 'Roboto', sans-serif;
+}
+
+.advance-digital p {
+    font-family: 'Roboto', sans-serif;
+    color: #5380cd;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 26px;
+}
+
+.advance-digital hr {
+    color: #64d3bb;
+    border: 1px solid #64d3bb;
+    background-color: #64d3bb;
+    font-size: 100px;
+    height: 3px;
+    display: block;
+    margin-left: 0;
+    margin-right: 85%;
+    margin-top: 0;
+    opacity: 1 !important;
+}
+
+.figure-title {
+    color: #037fd1;
+    font-family: 'Roboto', sans-serif;
+}
+
+.button1 {
+    background-color: #64d3bb;
+    color: #fff;
+    display: inline-block;
+    padding: 0.4em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border: none;
+    border-radius: 2em;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    transition: all .2s;
+    font-size: 16px;
+}
+@media only screen and (max-width:767px){
+    .advance-digital hr {
+        width: 150px !important;
+        margin: 20px auto !important;
+    }
+    .advance-digital .h3 {
+        text-align:center;
+    }
+}
+@media only screen and (max-width:767px){
+    .container{
+        padding: 0 20px;
+    }
+  }

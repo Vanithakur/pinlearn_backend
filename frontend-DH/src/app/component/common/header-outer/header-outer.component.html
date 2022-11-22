@@ -1,0 +1,45 @@
+<div class="header-area">
+    <!-- toolbar header start -->
+    <mat-toolbar>
+        <div class="brand-img">
+            <div class="logo" routerLink="/home">
+                <img  src="assets/images/logo.png" class="img-fluid" alt="brand-image">
+            </div>
+            <!-- <div class="logo-title">
+				<h1>The National Digital Health Strategy Map <a href="#">Data Details</a></h1>
+			</div> -->
+        </div>
+        <span class="example-spacer"></span>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav" routerLinkActive="active">
+                            <a class="nav-link"  routerLink="/home">Home</a>
+                        </li>
+                        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav" routerLinkActive="active">
+                            <a class="nav-link" routerLink="/methodology">Methodology</a>
+                        </li>
+                        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav" routerLinkActive="active">
+                            <a class="nav-link" [routerLink]="['../ndhs/ndhs-map']">Maps</a>
+                        </li>
+                        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav" routerLinkActive="active">
+                            <a class="nav-link" routerLink="/atlas">Atlas</a>
+                        </li>
+                        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav" routerLinkActive="active">
+                            <a class="nav-link" routerLink="/report" >Report</a>
+                        </li>
+                        <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav" routerLinkActive="active">
+                            <a class="nav-link" routerLink="/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </mat-toolbar>
+    <!-- toolbar header End -->
+</div>

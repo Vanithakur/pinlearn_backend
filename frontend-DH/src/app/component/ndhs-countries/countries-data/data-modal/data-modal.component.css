@@ -1,0 +1,217 @@
+.panel-heading h2 {
+    margin-bottom: 0;
+    color: rgb(9 25 62 / 60%);
+}
+
+.panel-heading button {
+    border-color: #128FFE !important;
+    color: #128FFE !important;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.panel {
+    padding: 15px;
+    box-shadow: 0px 0px 9px 1px rgb(204 204 204 / 50%);
+    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.table>:not(caption)>*>* {
+    border: none;
+}
+
+.data-heading h3 {
+    font-weight: 700;
+    color: rgb(0 0 0 / 70%);
+    font-size: 23px;
+    margin: 5px 0px;
+}
+
+.data-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.divider-vertical {
+    height: 30px;
+    width: 1px;
+    background: rgb(0 0 0 / 27%);
+    position: absolute;
+    margin-top: -5px;
+}
+::ng-deep .mat-tab-group.mat-primary .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled){
+    background-color: transparent !important;
+}
+::ng-deep .mat-tab-label-active {
+    color: #09193E;
+    opacity: 1;
+}
+
+::ng-deep .mat-ink-bar {
+    background-color: #09193E !important;
+}
+
+.status-badge ul {
+    padding: 0;
+    margin: 0;
+}
+
+.status-badge ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(0 0 0 / 60%);
+}
+
+.status-badge ul li span,
+.circle_badge {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+.status-badge ul li span.success,
+.circle_badge.success {
+    background-color: #04BF20;
+}
+
+.status-badge ul li span.danger,
+.circle_badge.danger {
+    background-color: #FF5E00;
+}
+
+.status-badge ul li span.disable-status,
+.circle_badge.disable-status {
+    background-color: #BFBFB6;
+}
+
+.data-status h2 {
+    font-weight: normal;
+}
+
+.data-table table th {
+    font-size: 20px;
+    color: rgba(76, 77, 73, 0.85);
+    font-weight: 600;
+}
+
+.data-table table td {
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 10px 12px 0px !important;
+}
+
+.table-badge {
+    text-align: right;
+}
+
+tr.border-less td {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+.data-table tbody {
+    border-top: transparent !important;
+}
+
+tr.border-less {
+    border-bottom: transparent;
+}
+
+.print-btn a {
+    background: #333 !important;
+    color: #fff;
+}
+
+.print-btn svg {
+    margin-right: 10px;
+}
+
+.print-btn {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+}
+
+.print-btn-inner {
+    position: relative;
+    z-index: 555;
+    width: 100px;
+}
+
+::ng-deep .mat-tab-label-container {
+    margin-right: 100px;
+}
+
+.close-dialog .mat-dialog-actions a {
+    margin-right: -45px;
+    margin-top: -90px;
+    position: absolute;
+    background: transparent;
+    min-width: auto !important;
+    padding: 0px !important;
+    border-radius: 50%;
+    -webkit-appearance: none;
+}
+
+
+.close-dialog .mat-dialog-actions a:hover {
+    background-color: transparent !important;
+}
+
+.close-dialog {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-dialog-mac .mat-dialog-actions a {
+    margin-left: 51px;
+    margin-top: -45px;
+    position: absolute;
+    background: transparent;
+    min-width: auto !important;
+    padding: 0px !important;
+    border-radius: 50%;
+    -webkit-appearance: none;
+}
+
+
+.close-dialog-mac .mat-dialog-actions a:hover {
+    background-color: transparent !important;
+}
+
+.close-dialog-mac {
+    display: flex;
+    justify-content: flex-end;
+}
+
+::ng-deep mat-dialog-container#mat-dialog-0, ::ng-deep mat-dialog-container#mat-dialog-1 {
+    padding: 0;
+}
+
+tr.with-boder td{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+::ng-deep .mat-dialog-container {
+    padding: 0px !important;
+    overflow:overlay !important;
+    overflow-x: hidden !important;
+}
+
+.loader-overlay-modal .loadingspinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
